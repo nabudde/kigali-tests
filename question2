@@ -1,0 +1,38 @@
+Make The UI Functional
+Your app looks good, its time to power up the UI and make it respond to user interaction.
+
+Write all JavaScript code in ES6. For DOM traversal, use the HTML5 Selector API only (i.e no use of getElementById or getelementsByTagName e.t.c).
+
+Do not update DOM elements by setting their inner HTML, set their text content instead.
+
+Step 1
+Create a users variable and assign it an empty array literal.
+Create a displaySelectedUser arrow function
+Create a letsCalculateBMI arrow function
+Create a powerupTheUI arrow function
+Within the startApp function, invoke the powerupTheUI function, followed by the fetchAndDisplayUsers function.
+Step 2
+In the powerupTheUI function, and using only the DOM Selector API :
+
+Set displaySelectedUser as a change event listener for the SELECT UI element.
+Set letsCalculateBMI as the click event listener for the #oracle BUTTON
+Step 3
+The fetchAndDisplayUsers tries to call a displayUsers function that does not exist. Lets fix that!
+
+Create a displayUsers arrow function just above the fetchAndDisplayUsers function. It should take a users parameter
+It should use the array .forEach function to iterate over users and populate the SELECT UI element with OPTION elements. Each OPTION should have its value set to the id of a given user, while its display text should be set to the user's name
+We can see a sample user in our app; a certain Charles Odili from Nigeria! Add a new user object (e.g representing yourself) to the users array in fetchAndDisplayUsers. Feel free to not use real data values, but ensure the id is different from that of the existing user.
+Step 4
+When we select the sample user from the list, nothing happens. Let's fix that!
+
+Create a getSelectedUser arrow function above displaySelectedUser. It should take a userId parameter and use the Array .find function on the users collection to find and return the selected user object. Your .find call should take an inline arrow function and de-structure its single parameter to obtain the id property.
+Step 5
+Recall that the displaySelectedUser function is called as an event handler. This means it will receive an event object when the DOM event is triggered.
+
+Update the displaySelectedUser function and de-structure the expected event parameter to just the target property.
+
+Next, displaySelectedUser should call getSelectedUser with a certain property of target that represents the selected value of the SELECT element from the change event. Feel free to do some Googling if you dont know the property in question. Finally, assign the result of your .getSelectedUser call to a user variable.
+
+Next, use Object.keys(..) to get the collection of properties of user. Assign it to a properties variable.
+
+Iterate over properties with the array .forEach function, and display the properties in the UI. Hint: * a given property like *Age has a corresponding SPAN element with a data-age-value attribute. You can use ES6 template strings to build the query selector targeting the SPAN for that property, and then query the DOM with it. You also want to make sure you only update the UI if the DOM query was successful. Good luck!

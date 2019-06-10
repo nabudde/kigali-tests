@@ -1,0 +1,32 @@
+Build & Style The UI
+Your app needs some UI elements. Follow the steps below to build it, then click the play button to run your code and see the outcome in the preview emulator.
+
+Step 1
+Within the STYLE tag, give the BODY element a white background
+Create a BUTTON element with ID of filter-query, and give it a CSS class of mdc-icon-button and material-icons. Set its text to filter_list.
+Create a DIV element and give it a CSS class of select. Within the DIV, create a SELECT element with a CSS class of select-text
+The SELECT element should have an option that is disabled and selected by defualt. Give this option any text you like, e.g "Select User"
+Next, create a new DIV with a CSS class of user-photo. Inside it, create an IMAGE and set its src to a placeholder from https://placeholder.com/ Make sure to give your IMAGE an alternate text
+Next, create a DIV with CSS class of details and mdc-elevation--z3. This DIV should have 5 PARAGRAPH elements, each containing a SPAN with CSS class prop and another SPAN with CSS class of value
+Step 2
+Using the SPAN elements so far created, your app will display the Age, Height, Weight, Gender, and Country of any given user. Let's call these the user properties!
+
+For a given user property, e.g Age, locate a PARAGRAPH element and give the child SPAN with class prop an HTML attribute of data-age, then set its text value to Age :. The SPAN with class value should have an HTML attribute of data-age-value. The HTML attributes do not need to have a vlaue.
+Just like for Age, do same for all the user properties listed above, such that all pairs of SPAN elements are mapped to excatly one user property. Feel free to order them anyhow you like.
+Step 3
+Create a BUTTON with an ID of oracle and CSS class of mdc-button. Give the button an call-to-action text of your choice, e.g "Calculate BMI"
+Create a DIV with an ID of outcome. Within it, create a HEADING element with CSS class of mdc-typography--headline5. Set the text of the HEADING to BMI.
+Next to the HEADING and still within the DIV with ID of outcome, create an empty PARAGRAPH.
+Time to make your app look good. To get a better preview as you go along, feel free to set some dummy data values in the SPAN elements for each user property
+
+Step 4
+The .select DIV should have a bottom margin of 2.5em
+The .user-photo DIV wrapping the user's IMAGE should have 150px of width and height, and styled to display as a circle. You might need to explore the overflow CSS property to make the IMAGE comply with the circular shape of the DIV
+Step 5
+The .details DIV should have white foreground color and #6200ee background color, font size of 1.3em, top margin of 4em, padding top/bottom of 0.5em and padding left/right of 1em, and optional curved edges of 10px
+The PARAGRAPH elements within the .details DIV should have margins of 0.3em
+The DIV with ID of outcome should use absolute positioning, with 2.2em from the right edge and 6.5em from the bottom edge of the viewport. It should be 100px wide, and have centered text.
+The HEADING within the DIV with ID of outcome should have 1em padding, white background, 10% curved edges, and no margins.
+The PARAGRAPH within the DIV with ID of outcome should be 40px high, have a white foreground color, solid white 5px bottom border, 2em font size, no margins, 0.5em top/bottom padding and no left/right padding
+Step 6
+The BUTTON with ID of oracle should have 2.5em top margin, solid 1px border, and occupy the available horizontal space.
